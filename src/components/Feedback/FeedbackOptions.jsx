@@ -1,10 +1,16 @@
-export const FeedbackOptions = ({ options }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <ul>
       {options.map((item, index) => {
         return (
           <li key={index}>
-            <button type="button">{item}</button>
+            <button
+              name={options[index].toLowerCase()}
+              type="button"
+              onClick={onLeaveFeedback}
+            >
+              {item}
+            </button>
           </li>
         );
       })}
