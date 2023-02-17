@@ -1,4 +1,9 @@
+import { StatTitle } from './Feedback.styled';
+import { StatisticsList } from './StatisticsList';
+import { StatisticsItem } from './StatisticsItem';
+
 import { Notification } from './Notification';
+
 export const Statistics = ({
   good,
   neutral,
@@ -8,17 +13,19 @@ export const Statistics = ({
 }) => {
   return (
     <div>
-      <h3>Statistics</h3>
+      <StatTitle>Statistics</StatTitle>
       {total === 0 ? (
         <Notification message="There is no feedback" />
       ) : (
-        <ul>
-          <li key={1}>Good: {good}</li>
-          <li key={2}>Neutral: {neutral}</li>
-          <li key={3}>Bad: {bad}</li>
-          <li key={4}>Total: {total}</li>
-          <li key={5}>Positive Feedback: {positivePercentage.toFixed(0)}%</li>
-        </ul>
+        <StatisticsList>
+          <StatisticsItem
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={total}
+            positivePercentage={positivePercentage}
+          />
+        </StatisticsList>
       )}
     </div>
   );

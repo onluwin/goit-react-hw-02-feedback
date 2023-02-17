@@ -1,1 +1,3 @@
-export const Notification = ({ message }) => <p>{message}</p>;
+import { Text } from './Feedback.styled';
+
+export const Notification = ({ message }) => <Text>{message}</Text>;
