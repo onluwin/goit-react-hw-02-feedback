@@ -21,6 +21,10 @@ p {
   border: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 ol,
 ul {
   list-style: none;

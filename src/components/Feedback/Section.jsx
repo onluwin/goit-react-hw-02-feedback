@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Wrapper } from './Feedback.styled';
 import { Title } from './Feedback.styled';
 
@@ -8,4 +10,8 @@ export const Section = ({ children, title }) => {
       <div>{children}</div>
     </Wrapper>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
 };

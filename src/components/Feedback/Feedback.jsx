@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Section } from './Section';
 import { FeedbackOptions } from './FeedbackOptions';
 import { Statistics } from './Statistics';

@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 import { StatTitle } from './Feedback.styled';
 import { StatisticsList } from './StatisticsList';
-import { StatisticsItem } from './StatisticsItem';
+// import { StatisticsItem } from './StatisticsItem';
 
 import { Notification } from './Notification';
 
@@ -17,16 +19,18 @@ export const Statistics = ({
       {total === 0 ? (
         <Notification message="There is no feedback" />
       ) : (
-        <StatisticsList>
-          <StatisticsItem
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={total}
-            positivePercentage={positivePercentage}
-          />
-        </StatisticsList>
+        <StatisticsList
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={total}
+          positivePercentage={positivePercentage}
+        />
       )}
     </div>
   );
+};
+
+Statistics.propTypes = {
+  total: PropTypes.number,
 };
