@@ -1,5 +1,5 @@
 import { Section } from './Section';
-import { FeedbackOptions } from './FeedbackOptions';
+
 import { Statistics } from './Statistics';
 import { OptionsList } from './OptionsList';
 
@@ -14,12 +14,10 @@ export const Feedback = ({ good, neutral, bad, onLeaveFeedback }) => {
 
   return (
     <Section title="Please leave your feedback">
-      <OptionsList>
-        <FeedbackOptions
-          options={['Good', 'Neutral', 'Bad']}
-          onLeaveFeedback={onLeaveFeedback}
-        />
-      </OptionsList>
+      <OptionsList
+        options={['Good', 'Neutral', 'Bad']}
+        onLeaveFeedback={onLeaveFeedback}
+      />
       <Statistics
         good={good}
         neutral={neutral}
